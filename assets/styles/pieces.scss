@@ -19,3 +19,36 @@
     bottom: 50px;
   }
 }
+
+@keyframes slideUp{
+  0%{
+    transform: translateY(-30px);
+   }
+   100%{
+     transform: translateY(0px);
+   }
+
+}
+@keyframes slideDown{
+  0%{
+    transform: translateY(0);
+   }
+   100%{
+     transform: translateY(-30px);
+   }
+}
+.pathogenesis__content__piece--animate-up {
+  animation-name: slideUp;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  visibility: visible !important;
+}
+
+.pathogenesis__content__piece--animate-down {
+  animation-name: slideDown;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  visibility: visible !important;
+}

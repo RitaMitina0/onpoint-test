@@ -7,6 +7,7 @@ html(lang="en")
     title Тестовое задание Onpoint
     link(rel="stylesheet", type="text/css", href="./assets/styles/main.css")
     script(type="text/javascript",src="./assets/scripts/jquery-3.3.1.min.js")
+    script(type="text/javascript",src="./assets/scripts/jquery.touchSwipe.min.js")
     script(type="text/javascript",src="./assets/scripts/onePageScroll.js")
   body
     .wrapper
@@ -20,8 +21,13 @@ html(lang="en")
                     img(src="./assets/images/hero/mountain.png", alt="Горы").mountain-img 
                     ul.hero__content__points
                       li.hero__content__point.hero__content__point--HbA1c
-                      li.hero__content__point.hero__content__point--CD
+                        .hero__content__point-above
+                      li.hero__content__point.hero__content__point--small
+                        .hero__content__point-above.hero__content__point-above--small
                       li.hero__content__point.hero__content__point--gip
+                        .hero__content__point-above.hero__content__point--average
+                      li.hero__content__point.hero__content__point--small.hero__content__point--small--position
+                        .hero__content__point-above.hero__content__point-above--small
                   .hero__content-gradient
         section.section.pathogenesis
           main.pathogenesis__main
@@ -29,80 +35,131 @@ html(lang="en")
               h1.page-title__pathogenesis Основа терапии - патогенез СД2
               .pathogenesis__content
                 .pathogenesis__content__img
-                  img(src="../assets/images/pathogenesis/glacier.png", alt="").pathogenesis-img
+                  img(src="./assets/images/pathogenesis/glacier.png", alt="").pathogenesis-img
                 .pathogenesis__content__pieces
                   .pathogenesis__content__piece.pathogenesis__content__piece--right
-                    img(src="../assets/images/pathogenesis/mini_pic/ice1.png", alt="").pathogenesis-img
+                    img(src="./assets/images/pathogenesis/mini_pic/ice1.png", alt="").pathogenesis-img
                   .pathogenesis__content__piece.pathogenesis__content__piece--center
-                    img(src="../assets/images/pathogenesis/mini_pic/ice2.png", alt="").pathogenesis-img
+                    img(src="./assets/images/pathogenesis/mini_pic/ice2.png", alt="").pathogenesis-img
                   .pathogenesis__content__piece.pathogenesis__content__piece--left
-                    img(src="../assets/images/pathogenesis/mini_pic/ice3.png", alt="").pathogenesis-img
+                    img(src="./assets/images/pathogenesis/mini_pic/ice3.png", alt="").pathogenesis-img
                   .pathogenesis__content__piece.pathogenesis__content__piece--bottom
-                    img(src="../assets/images/pathogenesis/mini_pic/ice4.png", alt="").pathogenesis-img
+                    img(src="./assets/images/pathogenesis/mini_pic/ice4.png", alt="").pathogenesis-img
         section.section.stages-of-pathogenesis
           main.stages__main
             .container
-              h1.page-title__stages Звенья патогенеза СД2
+              .stages__wrap
+                h1.page-title__stages Звенья патогенеза СД2
+                .pathogenesis__content__pieces
+                  .pathogenesis__content__piece.pathogenesis__content__piece--right
+                    img(src="./assets/images/stages-of-pathogenesis/ice/ice-r.png", alt="").pathogenesis-img
+                  .pathogenesis__content__piece.pathogenesis__content__piece--top
+                    img(src="./assets/images/stages-of-pathogenesis/ice/ice-t.png", alt="").pathogenesis-img
+                  .pathogenesis__content__piece.pathogenesis__content__piece--bottom
+                    img(src="./assets/images/stages-of-pathogenesis/ice/ice-b.png", alt="").pathogenesis-img
                 .scheme
-                  .scheme__left
+                  .scheme__side.scheme__left
                     .scheme__blocks
                       .scheme__block
                         .scheme__block__text
                           span.stage__number 8
                           span.stage__title Микрофлора кишечника
                         .scheme__block__img
-                          img(src="../assets/images/stages-of-pathogenesis/bodies/microflora.png", alt="").scheme-img
+                          img(src="./assets/images/stages-of-pathogenesis/bodies/microflora.png", alt="").scheme-img
                       .scheme__block
                         .scheme__block__text
                           span.stage__number 9
                           span.stage__title Нарушение иммунной регуляции/воспаление
                         .scheme__block__img
-                          img(src="../assets/images/stages-of-pathogenesis/bodies/infection.png", alt="").scheme-img
+                          img(src="./assets/images/stages-of-pathogenesis/bodies/infection.png", alt="").scheme-img
                       .scheme__block
                         .scheme__block__text.scheme__block__text--inline
-                          //- .stage__title--arrow
-                          //- span.stage__title амилин
+                          .stage__title--arrow
+                          span.stage__title амилин
                           
+                      .scheme__block.scheme__block--center
+                        .stage__arrow
                       .scheme__block
                         .scheme__block__text
                           span.stage__number 10
                           span.stage__title Желудок
                         .scheme__block__img
-                          img(src="../assets/images/stages-of-pathogenesis/bodies/stomach.png", alt="").scheme-img
+                          img(src="./assets/images/stages-of-pathogenesis/bodies/stomach.png", alt="").scheme-img
                   .scheme__center
                     .scheme__blocks
-                      .scheme__block
-                        .scheme__block__text
-                          span.stage__number 1
-                          span.stage__title β - клетки
-                        .scheme__block__img
-                          span.scheme__block__img--text β
-                      .cheme__block__union
+                      .scheme__block.scheme__block--center
+                        .scheme__block__union
+                          .scheme__block__main-img
+                            .scheme__block__text.scheme__block__text--inline
+                              span.stage__number 1
+                              span.stage__title β - клетки
+                            .scheme__block__img.scheme__block__img--center.scheme__block__img--margin
+                              span.scheme__block__img--text β
+                          .center-arrows.center-arrows--same
+                            .stage__arrow.stage__arrow--height
+                            .stage__arrow.stage__arrow--height
+                          .center-arrows.center-arrows--rotate
+                            .stage__arrow.stage__arrow--height-small
+                            .stage__arrow.stage__arrow--height-small.stage__arrow-small-rotate
+                          .center-arrows.center-arrows--rotate--size
+                            .stage__arrow.stage__arrow--height-long
+                            .stage__arrow.stage__arrow--height-long.stage__arrow--long-rotate
+                          .center-arrows.center-arrows--rotate-right
+                            .stage__arrow.stage__arrow--height-small.stage__arrow-small-rotate
+                            .stage__arrow.stage__arrow--height-small
+                          .center-arrows.center-arrows--rotate-size-right
+                            .stage__arrow.stage__arrow--height-long.stage__arrow--long-rotate
+                            .stage__arrow.stage__arrow--height-long
+                          .center-arrows
+                            .stage__arrow.stage__arrow--long
+                      .scheme__block__union
                         .scheme__block
                           .scheme__block__text
-                            span.stage__number 1
-                            span.stage__title инкретинового эффекта
+                            span.stage__number 2
+                            .scheme__block__arrow-union
+                              .stage__title--arrow
+                              span.stage__title инкретинового эффекта
                           
                         .scheme__block
-                          .scheme__block__text
-                            span.stage__number 2 
+                          .scheme__block__text.scheme__block__text--center-align
+                            span.stage__number 3
                             span.stage__title  Дефект α - клеток
-                          
-                      .scheme__block
-                        .sheme__block-title
-                        .scheme__block__text
-                          span.stage__number 11
-                          span.stage__title Почки
-                        .scheme__block__img
-                          img(src="../assets/images/stages-of-pathogenesis/bodies/reins.png", alt="").scheme-img
-                  .scheme__right
+                            .stage__arrows
+                              .stage__arrow.stage__arrow--center-size
+                            .scheme__block__arrow-union
+                              .stage__title--arrow.stage__title--arrow--rotate    
+                              span.stage__title глюкагон                   
+                      .center-arrows
+                        .stage__arrow.stage__arrow--center-average
+                        .stage__arrow.stage__arrow--center-long
+                        .stage__arrow.stage__arrow--center-short
+                      .scheme__block__wrap
+                        .center-arrows  
+                          .stage__arrow.stage__arrow--amilin
+                          .stage__arrow.stage__arrow--line
+                        
+                        .scheme__block.scheme__block--center.scheme__block--column
+                            .scheme__block__title.scheme__block__title--size Гипергликемия
+                              .stage__arrows
+                                .stage__arrow
+                                .stage__arrow.stage__arrow--rotate
+                            .scheme__block-union
+                              .scheme__block__text
+                                span.stage__number 11
+                                span.stage__title Почки
+                              .scheme__block__img
+                                img(src="./assets/images/stages-of-pathogenesis/bodies/reins.png", alt="").scheme-img
+                  .scheme__side.scheme__right
                     .scheme__blocks
                       .scheme__block.scheme__block--reverse
                         .scheme__block__text.scheme__block__text--align
                           span.stage__number 7
                           span.stage__title Головной мозг
                         .scheme__block__img
-                          img(src="../assets/images/stages-of-pathogenesis/bodies/brain.png", alt="").scheme-img
+                          img(src="./assets/images/stages-of-pathogenesis/bodies/brain.png", alt="").scheme-img
+                      .stage__arrows
+                        .stage__arrow
+                        .stage__arrow.stage__arrow--rotate
                       .scheme__block__union-right
                         span.scheme__block__title Инсулинорезистентность
                         .scheme__block.scheme__block--reverse
@@ -110,19 +167,19 @@ html(lang="en")
                             span.stage__number 6
                             span.stage__title Печень
                           .scheme__block__img
-                            img(src="../assets/images/stages-of-pathogenesis/bodies/capa.png", alt="").scheme-img
+                            img(src="./assets/images/stages-of-pathogenesis/bodies/capa.png", alt="").scheme-img
                         .scheme__block.scheme__block--reverse
                           .scheme__block__text.scheme__block__text--align
                             span.stage__number 5
                             span.stage__title Мышцы
                           .scheme__block__img
-                            img(src="../assets/images/stages-of-pathogenesis/bodies/musle.png", alt="").scheme-img
+                            img(src="./assets/images/stages-of-pathogenesis/bodies/musle.png", alt="").scheme-img
                         .scheme__block.scheme__block--reverse
                           .scheme__block__text.scheme__block__text--align
                             span.stage__number 4
                             span.stage__title Жировые клетки
                           .scheme__block__img
-                            img(src="../assets/images/stages-of-pathogenesis/bodies/lipid.png", alt="").scheme-img
+                            img(src="./assets/images/stages-of-pathogenesis/bodies/lipid.png", alt="").scheme-img
     .pagination
       ul.pagination__list
         li.pagination__item.pagination__item--active
@@ -131,5 +188,9 @@ html(lang="en")
           a(href="", data-scroll-to="1").pagination__link
         li.pagination__item
           a(href="", data-scroll-to="2").pagination__link
+    .down
+      .down__text Листайте вниз
+      .down__arrow
+      .down__bg
 //- pug --watch ./views/pages/ --out ./dist/
 
