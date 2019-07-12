@@ -1,0 +1,135 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Тестовое задание Onpoint
+    link(rel="stylesheet", type="text/css", href="./assets/styles/main.css")
+    script(type="text/javascript",src="./assets/scripts/jquery-3.3.1.min.js")
+    script(type="text/javascript",src="./assets/scripts/onePageScroll.js")
+  body
+    .wrapper
+      .maincontent#maincontent
+        section.section.hero.active
+          main.hero__main
+            .container
+                h1.page-title Всегда ли цели терапии СД2 на поверхности?
+                .hero__content
+                  .hero__content__mauntain
+                    img(src="./assets/images/hero/mountain.png", alt="Горы").mountain-img 
+                    ul.hero__content__points
+                      li.hero__content__point.hero__content__point--HbA1c
+                      li.hero__content__point.hero__content__point--CD
+                      li.hero__content__point.hero__content__point--gip
+                  .hero__content-gradient
+        section.section.pathogenesis
+          main.pathogenesis__main
+            .container
+              h1.page-title__pathogenesis Основа терапии - патогенез СД2
+              .pathogenesis__content
+                .pathogenesis__content__img
+                  img(src="../assets/images/pathogenesis/glacier.png", alt="").pathogenesis-img
+                .pathogenesis__content__pieces
+                  .pathogenesis__content__piece.pathogenesis__content__piece--right
+                    img(src="../assets/images/pathogenesis/mini_pic/ice1.png", alt="").pathogenesis-img
+                  .pathogenesis__content__piece.pathogenesis__content__piece--center
+                    img(src="../assets/images/pathogenesis/mini_pic/ice2.png", alt="").pathogenesis-img
+                  .pathogenesis__content__piece.pathogenesis__content__piece--left
+                    img(src="../assets/images/pathogenesis/mini_pic/ice3.png", alt="").pathogenesis-img
+                  .pathogenesis__content__piece.pathogenesis__content__piece--bottom
+                    img(src="../assets/images/pathogenesis/mini_pic/ice4.png", alt="").pathogenesis-img
+        section.section.stages-of-pathogenesis
+          main.stages__main
+            .container
+              h1.page-title__stages Звенья патогенеза СД2
+                .scheme
+                  .scheme__left
+                    .scheme__blocks
+                      .scheme__block
+                        .scheme__block__text
+                          span.stage__number 8
+                          span.stage__title Микрофлора кишечника
+                        .scheme__block__img
+                          img(src="../assets/images/stages-of-pathogenesis/bodies/microflora.png", alt="").scheme-img
+                      .scheme__block
+                        .scheme__block__text
+                          span.stage__number 9
+                          span.stage__title Нарушение иммунной регуляции/воспаление
+                        .scheme__block__img
+                          img(src="../assets/images/stages-of-pathogenesis/bodies/infection.png", alt="").scheme-img
+                      .scheme__block
+                        .scheme__block__text.scheme__block__text--inline
+                          //- .stage__title--arrow
+                          //- span.stage__title амилин
+                          
+                      .scheme__block
+                        .scheme__block__text
+                          span.stage__number 10
+                          span.stage__title Желудок
+                        .scheme__block__img
+                          img(src="../assets/images/stages-of-pathogenesis/bodies/stomach.png", alt="").scheme-img
+                  .scheme__center
+                    .scheme__blocks
+                      .scheme__block
+                        .scheme__block__text
+                          span.stage__number 1
+                          span.stage__title β - клетки
+                        .scheme__block__img
+                          span.scheme__block__img--text β
+                      .cheme__block__union
+                        .scheme__block
+                          .scheme__block__text
+                            span.stage__number 1
+                            span.stage__title инкретинового эффекта
+                          
+                        .scheme__block
+                          .scheme__block__text
+                            span.stage__number 2 
+                            span.stage__title  Дефект α - клеток
+                          
+                      .scheme__block
+                        .sheme__block-title
+                        .scheme__block__text
+                          span.stage__number 11
+                          span.stage__title Почки
+                        .scheme__block__img
+                          img(src="../assets/images/stages-of-pathogenesis/bodies/reins.png", alt="").scheme-img
+                  .scheme__right
+                    .scheme__blocks
+                      .scheme__block.scheme__block--reverse
+                        .scheme__block__text.scheme__block__text--align
+                          span.stage__number 7
+                          span.stage__title Головной мозг
+                        .scheme__block__img
+                          img(src="../assets/images/stages-of-pathogenesis/bodies/brain.png", alt="").scheme-img
+                      .scheme__block__union-right
+                        span.scheme__block__title Инсулинорезистентность
+                        .scheme__block.scheme__block--reverse
+                          .scheme__block__text.scheme__block__text--align
+                            span.stage__number 6
+                            span.stage__title Печень
+                          .scheme__block__img
+                            img(src="../assets/images/stages-of-pathogenesis/bodies/capa.png", alt="").scheme-img
+                        .scheme__block.scheme__block--reverse
+                          .scheme__block__text.scheme__block__text--align
+                            span.stage__number 5
+                            span.stage__title Мышцы
+                          .scheme__block__img
+                            img(src="../assets/images/stages-of-pathogenesis/bodies/musle.png", alt="").scheme-img
+                        .scheme__block.scheme__block--reverse
+                          .scheme__block__text.scheme__block__text--align
+                            span.stage__number 4
+                            span.stage__title Жировые клетки
+                          .scheme__block__img
+                            img(src="../assets/images/stages-of-pathogenesis/bodies/lipid.png", alt="").scheme-img
+    .pagination
+      ul.pagination__list
+        li.pagination__item.pagination__item--active
+          a(href="", data-scroll-to="0").pagination__link
+        li.pagination__item
+          a(href="", data-scroll-to="1").pagination__link
+        li.pagination__item
+          a(href="", data-scroll-to="2").pagination__link
+//- pug --watch ./views/pages/ --out ./dist/
+

@@ -1,0 +1,27 @@
+.pagination{
+
+  position: fixed;
+    right: 54px;
+    top		: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: 107px;
+}
+
+.pagination__item{
+  width: 27px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 15px 0;
+
+  &:hover{
+    background-color: #f78b1f;
+    cursor: pointer;
+  }
+}
+
+.pagination__item--active{
+  background-color: #f78b1f;
+  cursor: pointer;
+}

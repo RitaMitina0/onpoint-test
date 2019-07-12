@@ -1,0 +1,21 @@
+.pathogenesis__content__piece{
+  position: absolute;
+  // top: 0;
+
+  &.pathogenesis__content__piece--right{
+    right: 0;
+    top: 0;
+  }
+  &.pathogenesis__content__piece--center{
+    bottom: 120px;
+    left: 100px;
+  }
+  &.pathogenesis__content__piece--left{
+    left: 50px;
+    top: 100px;
+  }
+  &.pathogenesis__content__piece--bottom{
+    right: 100px;
+    bottom: 50px;
+  }
+}
